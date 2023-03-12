@@ -1,0 +1,32 @@
+BootCamp Azure – Cloud Treinamentos
+Boa tarde Rede, hoje que falar um pouco sobre a  Cloud Azure.
+Neste bootcamp começamos criando um recourcegroup é um contêiner logico onde coloco meus serviços/que em globa todos os recurso que vou utilizar em uma infraestrutura, depois fomos para criação da máquina virtual, que será um Windows server que irá hospedar nossa aplicação .NET. 
+Neste servidor wind 2019 baixamos o git, 
+Dentro da pasta source da aplicação
+Dotnet restore 
+Dotnet build
+Dotnet publish -c Release -o ./Publish
+Store para armazenar os arquivos, modo container
+Storage account criar
+Block container criar privado
+Dentro do container liberar a permirmissões no shared access signature
+Gerar o SAS e adicionar na mv
+Criar um imagem
+Primeiro faz um group 
+Depois stop vm e faz uma captura
+Importante lembrar que é um Specialized  na gallery details
+
+Criar uma nova vm
+Virtual macrine -> mesmo grupo | see all images e ir no shared images pegar a vc que criamos 
+Liberar as portas
+Lesensing type  Windows server
+Criar loadbalancer| colocar no mesmo resource group das vms| type public
+Frontip | cria um novo ip public
+Branckebd | Nome | Vitual net – mesma das vms | IP endereço e adicionar os dois ips internos da vm
+Impud rules configura o nome o front e back protoloco tcp porta 80 e 80 | cria o health probe | creat
+Da pra tirar os ip public e deixar somente o loadbalance
+IIS Web App ScaleSet
+Deletando as duas maquinas virtual
+Virtual machine scale sets criar | marcar a zonas de disponibilidade | licence windoes server | networking selecionar a rede já criada | alterar as configurações da placa de rede – public network allow e adicionar http, https e rpd| enable ip public | loadbalance craete all
+Scalling custon  nest e finish
+Add load balancing rule
